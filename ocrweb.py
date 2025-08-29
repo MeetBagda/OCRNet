@@ -165,8 +165,6 @@ with col2:
 # Add a separator
 st.markdown("<hr style='margin: 15px 0px; border: none; height: 2px; background-color: #D1D5DB;'>", unsafe_allow_html=True)
 
-# Create a card-like container for the form
-st.markdown("<div class='card'>", unsafe_allow_html=True)
 
 # Input options - disabled during processing
 input_method = st.radio("Select input method:", 
@@ -197,10 +195,10 @@ if input_method == "Upload Image":
             
         # Show image info in the second column
         with img_col2:
-            st.markdown("<h4 style='color: #4B5563; font-size: 16px;'>Image Information</h4>", unsafe_allow_html=True)
+            st.markdown("<h4 style='color: white; font-size: 16px;'>Image Information</h4>", unsafe_allow_html=True)
             if uploaded_image:
                 st.markdown(f"""
-                <ul style='font-size: 14px; color: #6B7280; list-style-type: none; padding-left: 0;'>
+                <ul style='color:white; font-size: 14px; list-style-type: none; padding-left: 0;'>
                     <li><strong>Size:</strong> {uploaded_image.size[0]} × {uploaded_image.size[1]} px</li>
                     <li><strong>Format:</strong> {uploaded_image.format if uploaded_image.format else "Unknown"}</li>
                     <li><strong>Mode:</strong> {uploaded_image.mode}</li>
